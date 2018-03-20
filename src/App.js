@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ProfilePic from './components/profilePic/profilePic'
-import AboutMe from './components/aboutMe/aboutMe'
+import ProfilePic from './components/profilePic/profilePic';
+import AboutMe from './components/aboutMe/aboutMe';
+import Projects from './components/projects/projects';
 import './App.css';
 
 class App extends Component {
@@ -9,9 +10,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <ProfilePic/>
-          <h1 className="App-title">{"Hi! I'm Kyle"}</h1>
+          <h1 className="App-title is-size-2 has-white-text-ter">{"Hi! I'm Kyle"}</h1>
         </header>
         <AboutMe/>
+        <Projects/>
       </div>
     );
   }

@@ -5,8 +5,8 @@ import './profilePic.css';
 class ProfilePic extends Component {
   render() {
     return (
-      <div className="ProfilePic">
-        <img src={profilePicture} className="ProfilePicture" alt="Kyle"/>
+        <div className="profilepic">
+        <img src={profilePicture} className="profilepicture" alt="Kyle"/>
       </div>
     );
   }

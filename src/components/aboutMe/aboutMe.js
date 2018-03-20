@@ -11,16 +11,16 @@ class AboutMe extends Component {
     const interests = `Talk to me about cars, food, the latest streetwear drops,
     and anything tech related!`
     return (
-      <div className="AboutMe-body">
-        <p className="AboutMe-text">{aboutMe}</p>
-        <p className="AboutMe-interests">{interests}</p>
+      <div className="aboutme__body is-size-5">
+        <p className="aboutme__text">{aboutMe}</p>
+        <p className="aboutme__interests">{interests}</p>
       </div>
     )
   }
   render() {
     return (
-      <div className="AboutMe">
-        <h2 className="AboutMe-header">
+      <div className="aboutme has-text-left">
+        <h2 className="aboutme__header title">
           Who am I?
         </h2>
       {this.renderAboutMeBody()}
