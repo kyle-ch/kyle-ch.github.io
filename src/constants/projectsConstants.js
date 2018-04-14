@@ -27,3 +27,16 @@ export const hypecookerContent = `Hypecooker is a bot for the popular clothing
                                   to start the automation, the script will go to each
                                   item, add the item to the cart, and check out as soon
                                   as possible.`
+
+export const collabContent = `Collab is a personal project I did to learn Ruby
+                              on Rails and learn to use external APIs. This project
+                              uses a gem that wraps the Spotify API. Collab allows users
+                              to search for 2 of their favorite artists and then searches
+                              their songs on Spotify and makes a list of songs that they
+                              have appeared on collaboratively. The user then has the ability
+                              to click a button to login and have a playlist with that list of
+                              songs on their Spotify Though it looks very crude, I was very
+                              proud of this project because I learned a great deal throughout
+                              the development process. It was my first Ruby on Rails from start
+                              to finish and I was very excited to show it off to others to showcase
+                              my love for music and my growth as a developer.`
