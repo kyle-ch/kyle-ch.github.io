@@ -13,8 +13,8 @@ body{
 
 .App-header {
   text-align: center;
-  background: linear-gradient(#A9A9A9, #EFEFEF);
-  color: black;
+  background: linear-gradient(black, #EFEFEF);
+  color: #EFEFEF;
   padding-top: 20px;
   width: auto;
 }
