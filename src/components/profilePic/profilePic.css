@@ -2,4 +2,11 @@
   width: 100%;
   max-width: 250px;
   height: auto;
+  border-radius: 50%;
+  transition: border-radius .5s ease;
+}
+
+.profilepicture:hover {
+  transition: border-radius .5s ease;
+  border-radius: 10%;
 }

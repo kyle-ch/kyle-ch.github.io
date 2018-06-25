@@ -8,14 +8,18 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <ProfilePic/>
-          <h1 className="App-title is-size-2 has-white-text-ter">{"Hi! I'm Kyle"}</h1>
-          <Links/>
-        </header>
-        <AboutMe/>
-        <Projects/>
+      <div className="App columns">
+        <div className="App-header column is-one-quarter-desktop">
+          <div className="fixed">
+            <ProfilePic/>
+            <h1 className="App-title is-size-2 has-white-text-ter">{"Kyle Chan"}</h1>
+            <Links/>
+          </div>
+        </div>
+        <div className="column">
+          <AboutMe/>
+          <Projects/>
+        </div>
       </div>
     );
   }
