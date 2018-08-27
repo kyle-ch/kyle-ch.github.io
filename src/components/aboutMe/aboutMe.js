@@ -11,7 +11,7 @@ class AboutMe extends Component {
     const interests = `Talk to me about cars, food, sneakers, the latest
     streetwear drops, and anything tech related!`
     const opportunities = `I'm open to any new opporunties
-    so feel free to contact me about your ideas! ${process.env.REACT_APP_SECRET_CODE}`
+    so feel free to contact me about your ideas!`
     return (
       <div className="aboutme__body is-size-5">
         <p className="aboutme__text">{aboutMe}</p>
