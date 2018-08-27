@@ -57,13 +57,12 @@ class ContactBox extends Component {
         "key":"c0zrj7bxf6"
         }
     }
-    fetch(process.env.REACT_APP_MAILER, {
+    fetch('http://localhost:3001/mails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      mode: 'no-cors',
       body: JSON.stringify(payload)
     }).then(res => {
       console.log(res);
