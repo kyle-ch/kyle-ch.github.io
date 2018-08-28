@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './contactBox.css';
 
 class ContactBox extends Component {
   constructor() {
@@ -10,41 +11,63 @@ class ContactBox extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <form className="contact-box">
-          <label className="contact-box contact-box-label">
-            Name:
-            <input className="contact-box contact-box-text"
-              type="text" value={this.state.name}
-              onChange={ e => this.setState({ name : e.target.value }) }/>
-          </label>
-          <label className="contact-box contact-box-label">
-            Email:
-            <input className="contact-box contact-box-text"
-            type="text" value={this.state.email}
-            onChange={ e => this.setState({ email : e.target.value }) }/>
-          </label>
-          <label className="contact-box contact-box-label">
-            Message:
-            <input className="contact-box contact-box-text"
-            type="text" value={this.state.body}
-            onChange={ e => this.setState({ body : e.target.value }) }/>
-          </label>
-        </form>
-        {this.state.name}
-        {this.renderSubmitButton()}
-      </div>
-    )
+    return this.renderContent();
   }
 
   renderSubmitButton() {
     if (this.state.submitted) {
-      return <input className="contact-box contact-box-submit" type="submit" value="Thank You!" disabled="true"/>
+      return (
+        <div>
+          <button onClick={this.handleSubmit.bind(this)} className="button contact-box-button" value="Submit" disabled="true">Submit</button>
+          <p>Thank you!</p>
+          <p>I will get back to you shortly!</p>
+        </div>
+      )
     }
     else {
-      return <button onClick={this.handleSubmit.bind(this)} className="contact-box contact-box-submit" value="Submit" />
+      return <button onClick={this.handleSubmit.bind(this)} className="button contact-box-button" value="Submit">Submit</button>
     }
+  }
+
+  renderContent() {
+    if (this.state.active) {
+      return (
+        <div className="contact-box-container">
+          <form className="contact-box">
+            <label className="contact-box contact-box-label">
+              Name:
+              <input className="contact-box contact-box-text"
+                type="text" value={this.state.name}
+                onChange={ e => this.setState({ name : e.target.value }) }/>
+            </label>
+            <label className="contact-box contact-box-label">
+              Email:
+              <input className="contact-box contact-box-text"
+              type="text" value={this.state.email}
+              onChange={ e => this.setState({ email : e.target.value }) }/>
+            </label>
+            <label className="contact-box contact-box-label">
+              Message:
+              <textarea className="contact-box contact-box-text contact-box-text-message"
+              value={this.state.body}
+              onChange={ e => this.setState({ body : e.target.value }) }/>
+            </label>
+          </form>
+          <div className="contact-box">
+            {this.renderSubmitButton()}
+          </div>
+        </div>
+      )
+    }
+    else {
+      return (
+        <button onClick={this.activateButton.bind(this)} className="button contact-box-button" value="Contact">Contact Me</button>
+      )
+    }
+  }
+
+  activateButton(event) {
+    this.setState({active : true});
   }
 
   handleSubmit(event) {
@@ -57,7 +80,7 @@ class ContactBox extends Component {
         "key":"c0zrj7bxf6"
         }
     }
-    fetch('http://localhost:3001/mails', {
+    fetch(process.env.REACT_APP_MAILER, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -66,6 +89,7 @@ class ContactBox extends Component {
       body: JSON.stringify(payload)
     }).then(res => {
       console.log(res);
+      this.setState({submitted : true});
     }).catch(error => {
       console.log(error);
     })
