@@ -21,6 +21,9 @@ class App extends Component {
         <div className="column">
           <AboutMe/>
           <Projects/>
+          <footer className="simpleFooter">
+            <a href="https://github.com/kyle-ch/kyle-ch.github.io">Source</a>
+          </footer>
         </div>
       </div>
     );

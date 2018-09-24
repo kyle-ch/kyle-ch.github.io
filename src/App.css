@@ -41,3 +41,7 @@ body{
   align-self: center;
   /* position: fixed; */
 }
+
+.simpleFooter {
+  margin-bottom: 8px;
+}
