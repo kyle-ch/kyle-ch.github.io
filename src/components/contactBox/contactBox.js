@@ -25,7 +25,12 @@ class ContactBox extends Component {
       )
     }
     else {
-      return <button onClick={this.handleSubmit.bind(this)} className="button contact-box-button" value="Submit">Submit</button>
+      return (
+        <div className="contact-box-buttons">
+          <button onClick={this.handleCancel.bind(this)} className="button contact-box-button" value="Cancel">Cancel</button>
+          <button onClick={this.handleSubmit.bind(this)} className="button contact-box-button" value="Submit">Submit</button>
+        </div>
+      )
     }
   }
 
@@ -68,6 +73,10 @@ class ContactBox extends Component {
 
   activateButton(event) {
     this.setState({active : true});
+  }
+
+  handleCancel(event) {
+    this.setState({ active: false });
   }
 
   handleSubmit(event) {
