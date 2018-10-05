@@ -10,7 +10,7 @@ class AboutMe extends Component {
     at Forward Financing and as a QA engineer at Jobcase.`
     const interests = `Talk to me about cars, food, sneakers, the latest
     streetwear drops, and anything tech related!`
-    const opportunities = `I'm open to any new opporunties
+    const opportunities = `I'm open to any new opportunties
     so feel free to contact me about your ideas!`
     return (
       <div className="aboutme__body is-size-5">
