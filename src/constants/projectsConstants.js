@@ -1,5 +1,5 @@
 export const buyerspaceContent = `Buyerspace takes the traditional online marketplace
-                                  turns it upside down by empowering buyers. Buyers
+                                  and turns it upside down by empowering buyers. Buyers
                                   put out listings for items they are looking for and
                                   sellers can offer them a price if they have the item
                                   for the buyer. This was the final project for
