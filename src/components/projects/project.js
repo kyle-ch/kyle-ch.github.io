@@ -13,7 +13,7 @@ class Project extends Component {
             <p className="is-size-5 has-text-grey">{this.props.content}</p>
           </div>
           <div className="column">
-            <img className="project-photo" src={this.props.photo} alt="Buyerspace"/>
+            <img className={`project-photo ${this.props.iphone ? "iphone" : ""}`} src={this.props.photo}/>
           </div>
         </div>
       </div>

@@ -40,3 +40,10 @@ export const collabContent = `Collab is a personal project I did to learn Ruby
                               the development process. It was my first Ruby on Rails from start
                               to finish and I was very excited to show it off to others to showcase
                               my love for music and my growth as a developer.`
+
+export const dinnerPalContent = `DinnerPal is a work in progress project that I am working on to practice
+                                React, learn React Native, and dive into mobile development. Motivated by
+                                my constant indecisiveness about what to cook or what to eat, I made the app
+                                give users less room for customization and only display one recipe at a time
+                                to help decide for them. This is still a work in progress and there is much
+                                more work I want to do before publishing it.`
