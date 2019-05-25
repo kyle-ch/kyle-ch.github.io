@@ -15,7 +15,6 @@ class App extends Component {
             <ProfilePic/>
             <h1 className="App-title is-size-2 has-white-text-ter">{"Kyle Chan"}</h1>
             <Links/>
-            <ContactBox/>
           </div>
         </div>
         <div className="column">
