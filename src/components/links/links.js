@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Resume from './KyleChanCoOp2017.pdf';
+import Resume from './kyleChanResume.pdf';
 
 class Links extends Component {
   render() {
