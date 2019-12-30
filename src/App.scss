@@ -4,17 +4,15 @@ body{
   margin: 0px;  /*removes default style*/
   display: flex;  /*enables flex content for its children*/
   box-sizing: border-box;
+  color: black
 }
 
 .App {
   text-align: center;
-  background-color: #EFEFEF;
 }
 
 .App-header {
   text-align: center;
-  background: #565656;
-  color: #EFEFEF;
   padding-top: 20px;
   width: auto;
 }
@@ -44,4 +42,43 @@ body{
 
 .simpleFooter {
   margin-bottom: 8px;
+}
+
+.item {
+  background-color: #eeeeee;
+  border-radius: 1%;
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.has-text-left {
+  margin: 0 auto;
+}
+
+.title {
+  color: #000000
+}
+
+.nightmode-toggle-checkbox {
+  display: none;
+}
+
+.nightmode-toggle-checkbox:checked + .nightmode-toggle::before {
+  content: '☀';
+}
+
+@media (prefers-color-scheme: dark) {
+  .App {
+    background:  black; color: white;
+  }
+  .item {
+    background: #707777;
+  }
+  .title {
+    color: white
+  }
+
+  .nightmode-toggle::before  {
+    content: '☾';
+  }
 }
