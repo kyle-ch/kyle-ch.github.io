@@ -15,19 +15,11 @@ class App extends Component {
             <ProfilePic/>
             <h1 className="App-title is-size-2 has-white-text-ter">{"Kyle Chan"}</h1>
             <Links/>
-            <input className="nightmode-toggle-checkbox"
-              id="nightmode-toggle-checkbox"
-              type="checkbox"
-            />
-            <label className="nightmode-toggle"
-              for="nightmode-toggle-checkbox"
-            />
-
           </div>
         </div>
         <div className="column">
           <AboutMe/>
-          <Experience/>
+          {/* <Experience/> */}
           <Projects/>
           <footer className="simpleFooter">
             <a href="https://github.com/kyle-ch/kyle-ch.github.io">Source</a>
