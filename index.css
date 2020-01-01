@@ -1,0 +1,124 @@
+body{
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  display: flex;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  text-align: center;
+  padding-top: 20px;
+  width: auto;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.is-one-quarter-desktop {
+  height: auto;
+}
+
+.fixed {
+  align-self: center;
+  /* position: fixed; */
+}
+
+.simpleFooter {
+  margin-bottom: 8px;
+}
+
+.item {
+  background-color: #eeeeee;
+  border-radius: 1%;
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.has-text-left {
+  margin: 0 auto;
+}
+
+.title {
+  color: #000000
+}
+
+.nightmode-toggle-checkbox {
+  display: none;
+}
+
+.nightmode-toggle-checkbox:checked + .nightmode-toggle::before {
+  content: '☀';
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:  black; color: white;
+  }
+  .item {
+    background: #313131;
+  }
+  .title {
+    color: white
+  }
+
+  .nightmode-toggle::before  {
+    content: '☾';
+  }
+}
+
+.aboutme {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.profilepicture {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.projects {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.project {
+  padding-bottom: 5%;
+}
+
+.iphone {
+  width: 50%;
+}
+
+p > a {
+  color: #67a3ff;
+}
+
+p > a:hover {
+  color: #3863a5;
+}
